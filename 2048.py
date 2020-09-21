@@ -3,16 +3,12 @@ import random
 import os
 
 def clear():
-    '''
-    It clears the screen.
-    '''
+    ''' It clears the screen.'''
 
     os.system('cls')
 
 def InitMatrix():
-    '''
-    It initializes the matrix as a board game.
-    '''
+    ''' It initializes the matrix as a board game.'''
 
     m = [[0 for i in range(4)] for j in range(4)]
     for i in range(2):
@@ -27,9 +23,7 @@ def InitMatrix():
 
 
 def ShowMatrix():
-    '''
-    It displays the matrix on the screen.
-    '''
+    ''' It displays the matrix on the screen.'''
 
     for col in m:
         for elem in col:
@@ -37,11 +31,9 @@ def ShowMatrix():
         print()
 
 def MoveDown():
-    '''
-    When the down key is pressed it computes to the bottom of the matrix the
+    '''When the down key is pressed it computes to the bottom of the matrix the
     adjacent elements with the same value and moves the other elements in the
-    same direction if there are empty cells.
-    '''
+    same direction if there are empty cells.'''
 
     global movement
     for j in range(4):
@@ -64,11 +56,9 @@ def MoveDown():
 
 
 def MoveUp():
-    '''
-    It computes to the matrix upper side the adjacent elements with the same
+    '''It computes to the matrix upper side the adjacent elements with the same
     value and moves the other elements to the same side if there are empty cells
-    when the up key is pressed.
-    '''
+    when the up key is pressed.'''
 
     global movement
     for j in range(4):
@@ -91,11 +81,9 @@ def MoveUp():
 
 
 def MoveLeft():
-    '''
-    It computes to the matrix left side the adjacent elements with the same
+    '''It computes to the matrix left side the adjacent elements with the same
     value and moves the other elements to the same side if there are empty cells
-    when the left key is pressed.
-    '''
+    when the left key is pressed.'''
 
     global movement
     for i in range(4):
@@ -118,11 +106,9 @@ def MoveLeft():
 
 
 def MoveRight():
-    '''
-    It computes to the matrix right side the adjacent elements with the same
+    ''' It computes to the matrix right side the adjacent elements with the same
     value and moves the other elements to the same side if there are empty cells
-    when the right key is pressed.
-    '''
+    when the right key is pressed.'''
 
     global movement
     for i in range(4):
@@ -144,19 +130,15 @@ def MoveRight():
                 x -= 1
 
 def SupplyElem():
-    '''
-    It inserts a new element (2 or 4) in an random empty cell if at least the two
+    ''' It inserts a new element (2 or 4) in an random empty cell if at least the two
     adjacent elements have been computed or an element has been moved to a new
-    cell.
-    '''
+    cell.'''
 
     if movement == True:
         RandomElem()
 
 def RandomElem():
-    '''
-    It generates the position where the new element will be inserted.
-    '''
+    ''' It generates the position where the new element will be inserted.'''
 
     x = random.randint(0, 3)
     y = random.randint(0, 3)
