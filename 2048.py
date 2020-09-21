@@ -204,9 +204,9 @@ while max_value <= 2048:
         clear()
         print("\nYOU HAVE LOST!")
         print(f"\nSCORE: {max_value}")
-        with open("Score.txt", "a") as scorefile:
+        with open("Score.txt", "a") as scorefile:  #don't forget to write the path for the directory where the Score file is stored 
             scorefile.write(f" {str(max_value)}")
-        with open("Score.txt", "r") as scorefile2:
+        with open("Score.txt", "r") as scorefile2:  #don't forget to write the path for the directory where the Score file is stored 
             score_read = scorefile2.read()
             list_score = score_read.split()
             list_score = [int(elem) for elem in list_score]
@@ -216,9 +216,9 @@ while max_value <= 2048:
     if max_value == 2048:
          print("\nYOU HAVE WON!")
          print(f"\nSCORE: {max_value}")
-         with open("Score.txt", "a") as scorefile:
+         with open("Score.txt", "a") as scorefile:  #don't forget to write the path for the directory where the Score file is stored 
              scorefile.write(f" {str(max_value)}")
-         with open("Score.txt", "r") as scorefile2:
+         with open("Score.txt", "r") as scorefile2:  #don't forget to write the path for the directory where the Score file is stored 
              score_read = scorefile2.read()
              list_score = score_read.split()
              list_score = [int(elem) for elem in list_score]
