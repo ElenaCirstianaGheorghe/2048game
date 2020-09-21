@@ -204,9 +204,9 @@ while max_value <= 2048:
         clear()
         print("\nYOU HAVE LOST!")
         print(f"\nSCORE: {max_value}")
-        with open("D:/Work/Jocuri/2048/Score.txt", "a") as scorefile:
+        with open("Score.txt", "a") as scorefile:
             scorefile.write(f" {str(max_value)}")
-        with open("D:/Work/Jocuri/2048/Score.txt", "r") as scorefile2:
+        with open("Score.txt", "r") as scorefile2:
             score_read = scorefile2.read()
             list_score = score_read.split()
             list_score = [int(elem) for elem in list_score]
@@ -216,9 +216,9 @@ while max_value <= 2048:
     if max_value == 2048:
          print("\nYOU HAVE WON!")
          print(f"\nSCORE: {max_value}")
-         with open("D:/Work/Jocuri/2048/Score.txt", "a") as scorefile:
+         with open("Score.txt", "a") as scorefile:
              scorefile.write(f" {str(max_value)}")
-         with open("D:/Work/Jocuri/2048/Score.txt", "r") as scorefile2:
+         with open("Score.txt", "r") as scorefile2:
              score_read = scorefile2.read()
              list_score = score_read.split()
              list_score = [int(elem) for elem in list_score]
